@@ -1,0 +1,27 @@
+{
+  "name": "dlw-download-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "// SERVING //": "",
+    "serve": "cross-env NODE_ENV=development concurrently \"postcss public/css/tailwind.css -o public/build/tailwind.css --watch\"  \"serve ./public\"",
+    "serve:prod": "cross-env NODE_ENV=production npm run serve",
+    "start": "npm run serve",
+    "// BUILDING //": "",
+    "build": "postcss public/css/tailwind.css -o public/build/tailwind.css",
+    "build:prod": "cross-env NODE_ENV=production npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "concurrently": "^6.0.0",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.2.9",
+    "postcss-cli": "^8.3.1",
+    "serve": "^11.3.2",
+    "tailwindcss": "^2.0.4"
+  }
+}
