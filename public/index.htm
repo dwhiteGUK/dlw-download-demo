@@ -18,12 +18,11 @@
           >
         </div>
         <a
-          download
           href="https://darrenwhite.dev/images/john-fowler-d2YMQ-hZ3og-unsplash.jpg"
           class="inline-flex items-center mt-4 px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
           data-remote
         >
-          Download image
+          Remote
           <svg
             class="ml-2 w-6 h-6"
             fill="currentColor"
@@ -40,7 +39,7 @@
       <div>
     </main>
 
-    <script module type="text/javascript">
+    <script defer type="text/javascript">
       const a = document.querySelector('a[data-remote]')
 
       a.addEventListener('click', async (e) => {
@@ -55,7 +54,6 @@
         const downloadLink = document.createElement("a");
         downloadLink.href = blobUrl;
         downloadLink.download = 'download-example.jpg';
-        downloadLink.target = '_blank';
 
         downloadLink.click();
       })
